@@ -35,5 +35,19 @@ img {
   max-width: 100%;
 }
 
+.grid img
+.product img {
+  padding: 3em 0;
+  text-align: center;
+  border: 1px solid #000;
+}
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
 
+.grid #products img {
+  grid-column: 1/4;
+}
