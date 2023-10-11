@@ -217,6 +217,12 @@ footer p {
     padding-top: 1em;
     font-size: var(--font-size-sm);
   }
+
+  #article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+  }
 }
 
 @media (min-width: 960px) {
