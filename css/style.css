@@ -165,7 +165,7 @@ article img {
 .product {
   background-color: #FAFAFA;
   border-radius: 20px;
-  padding: 0;
+  padding: 1em;
   text-align: center;
 }
 
