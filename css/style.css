@@ -76,16 +76,17 @@ img {
   padding: 0.5em;
 }
 
-#products {
+div #products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1em;
+  grid-column: 1 / 4;
 }
 
-#products div {
+/* #products img {
   grid-column: 1 / 4;
   padding-top: 3em;
-}
+} */
 
 div h1 {
   font-size: var(--font-size-xxl);
@@ -139,15 +140,17 @@ section h2 {
 }
 
 blockquote {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0;
-  margin: 0 auto;
-  max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 auto;
+    max-width: 40%;
 }
 
 #quotes footer {
   text-align: left;
+  padding-top: 1em;
+  font-size: var(--font-size-sm);
 }
 
 #article {
@@ -181,7 +184,39 @@ footer p {
 }
 
 @media (min-width: 768px) {
+  .grid #products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+  }
 
+  span {
+    float: left;
+    width: 50%;
+    padding: 1em;
+  }
+
+  span:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #quotes {
+    margin-top: 10em;
+  }
+
+  blockquote {
+    margin: 0 auto;
+    max-width: 40%;
+  }
+
+  #quotes footer {
+    text-align: left;
+    padding-top: 1em;
+    font-size: var(--font-size-sm);
+  }
 }
 
 @media (min-width: 960px) {
